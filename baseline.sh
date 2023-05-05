@@ -28,6 +28,9 @@ brew install k9s
 brew install kubectx
 brew install argocd
 
+##terraform
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
 
 ##Cloud SDK
 sudo apt install apt-transport-https ca-certificates gnupg

@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="awesomepanda"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -38,10 +38,10 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
- DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
- ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -70,15 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git
-        terraform
-        gcloud
-        kubectl
-        cp
-        #zsh-autosuggestions
-        #zsh-z
-        #zsh-syntax-highlighting
-)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,40 +96,25 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+plugins=(git
+        terraform
+        gcloud
+        kubectl
+        cp
+        zsh-autosuggestions
+        zsh-z
+        zsh-syntax-highlighting
+	fzf
+)
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ll="ls -lha"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/paulo/google-cloud-sdk/path.zsh.inc' ]; then . '/home/paulo/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
+## TERRAFORM
 alias tf="terraform"
 alias tfap="terraform apply --auto-approve"
-alias k="kubectl"
-
-alias ll="ls -lah"
-alias vissh="vi ~/.ssh/config"
-alias kgp="k get pods -o wide"
-alias kgn="k get nodes -o wide"
-alias kgs="k get service"
-alias kgpv="k get pv"
-alias kgpvc="k get pvc"
-alias kd="k describe"
-alias kns="kubens"
-alias kcx="kubectx"
-alias pod-check="kgp -A -o wide | grep -v Running | grep -v Comp"
-alias pod-count="kgp -A | wc -l"
-
-## SSL
-alias certexp="openssl x509 -enddate -noout -in"
-alias certcheck="openssl x509 -noout -text -in"
-alias caverify="openssl verify -CAfile"
-
-## Git
-alias gcm="git commit -m"
-alias gp="git push"
-alias gpt="git push --tags"
+alias tfd= "terraform destroy"
 
 ## ARGOCD
 alias kgsargo="kubectl -n argo-cd get secret argocd-initial-admin-secret  -o jsonpath="{.data.password}" | base64 -d"
@@ -147,16 +124,3 @@ alias kpfargos="kubectl port-forward svc/argocd-server 8080:80 -n argocd"
 alias kpfargo="kubectl port-forward svc/argocd-server 8080:80 -n argo-cd"
 
 alias argoc4="argocd login 127.0.0.1:8080"
-
-## TOOLS
-
-
-
-
-
-
-#if [ -f '/home/paulo/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/paulo/google-cloud-sdk #completion.zsh.inc'; fi
-
-# Generated for envman. Do not edit.
-[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
-

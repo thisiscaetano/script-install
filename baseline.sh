@@ -9,6 +9,7 @@ sudo apt install mc
 sudo apt install flameshot
 sudo apt install exa
 sudo apt install zsh
+sudo apt install zsh zplug
 sudo apt install git-all
 
 
@@ -75,22 +76,22 @@ wine --version
 
 
 ##Docker
-curl -fsSL https://get.docker.com | bash
+#curl -fsSL https://get.docker.com | bash
 
 #Download the following dependencies:
-#sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
+sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
 #Download Docker’s official GPG key to verify the integrity of packages
-#curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
 
 #Add the Docker repository to your system repository
-#sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian bookworm stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian bookworm stable"
 
 #Update the apt repository:
 sudo apt-get update
 
 #Install Docker Engine and containerd:
-#sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 #Check the status by typing:
 systemctl status docker

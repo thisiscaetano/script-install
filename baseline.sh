@@ -2,15 +2,13 @@
 ##Base Files
 sudo apt install neofetch
 sudo apt install curl
-sudo apt install git
 sudo apt-get install build-essential
 sudo apt install wget gpg
 sudo apt install mc
 sudo apt install flameshot
 sudo apt install exa
-sudo apt install zsh
-sudo apt install zsh zplug
 sudo apt install git-all
+sudo apt install snap
 
 
 ##Chrome
@@ -61,9 +59,7 @@ sudo apt install ./veracrypt-1.25.9-Debian-11-amd64.deb
 
 
 ##Zsh
-brew install zsh
-##  autoload -Uz zsh-newuser-install
-##  zsh-newuser-install -f
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ##Wine
 sudo dpkg --add-architecture i386 
@@ -123,3 +119,12 @@ sudo apt install brave-browser
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client -y
+
+# Authy
+sudo snap install authy
+
+# Remmina
+sudo snap install remmina
+
+# Terminator
+sudo apt install terminator

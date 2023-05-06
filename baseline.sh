@@ -1,5 +1,6 @@
 
 ##Base Files
+sudo apt update
 sudo apt install neofetch
 sudo apt install curl
 sudo apt-get install build-essential
@@ -121,10 +122,14 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 sudo apt-get update && sudo apt-get install spotify-client -y
 
 # Authy
-sudo snap install authy
+sudo snap install authy -y
 
 # Remmina
-sudo snap install remmina
+sudo snap install remmina -y
 
 # Terminator
-sudo apt install terminator
+sudo apt install terminator -y
+
+# Pipewire - para compartilhamento de tela no meet
+sudo apt install pipewire -y
+systemctl --user start pipewire wireplumber

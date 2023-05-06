@@ -1,15 +1,15 @@
 
 ##Base Files
 sudo apt update
-sudo apt install neofetch
-sudo apt install curl
-sudo apt-get install build-essential
-sudo apt install wget gpg
-sudo apt install mc
-sudo apt install flameshot
-sudo apt install exa
-sudo apt install git-all
-sudo apt install snap
+sudo apt install neofetch -y
+sudo apt install curl -y
+sudo apt-get install build-essential -y
+sudo apt install wget gpg -y
+sudo apt install mc -y
+sudo apt install flameshot -y
+sudo apt install exa -y
+sudo apt install git-all -y
+sudo apt install snap -y
 
 
 ##Chrome

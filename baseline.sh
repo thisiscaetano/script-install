@@ -9,7 +9,7 @@ sudo apt install mc -y
 sudo apt install flameshot -y
 sudo apt install exa -y
 sudo apt install git-all -y
-sudo apt install snap -y
+sudo apt install snapd -y
 
 
 ##Chrome

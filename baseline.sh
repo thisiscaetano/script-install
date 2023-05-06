@@ -122,14 +122,20 @@ echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sou
 sudo apt-get update && sudo apt-get install spotify-client -y
 
 # Authy
-sudo snap install authy -y
+sudo snap install authy
 
 # Remmina
-sudo snap install remmina -y
+sudo snap install remmina
 
 # Terminator
-sudo apt install terminator -y
+sudo apt install terminator
 
 # Pipewire - para compartilhamento de tela no meet
 sudo apt install pipewire -y
 systemctl --user start pipewire wireplumber
+
+# Lens
+curl -fsSL https://downloads.k8slens.dev/keys/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/lens-archive-keyring.gpg > /dev/null
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/lens-archive-keyring.gpg] https://downloads.k8slens.dev/apt/debian stable main" | sudo tee /etc/apt/sources.list.d/lens.list > /dev/null
+sudo apt update
+sudo apt install lens

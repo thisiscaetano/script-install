@@ -9,6 +9,7 @@ sudo apt install mc
 sudo apt install flameshot
 sudo apt install exa
 sudo apt install zsh
+sudo apt install zplug
 sudo apt install git-all
 sudo apt install snapd
 sudo apt install vim

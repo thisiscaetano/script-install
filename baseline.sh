@@ -1,16 +1,17 @@
 
 ##Base Files
 sudo apt update
-sudo apt install neofetch -y
-sudo apt install curl -y
-sudo apt-get install build-essential -y
-sudo apt install wget gpg -y
-sudo apt install mc -y
-sudo apt install flameshot -y
-sudo apt install exa -y
-sudo apt install git-all -y
-sudo apt install snapd -y
-
+sudo apt install neofetch
+sudo apt install curl
+sudo apt-get install build-essential
+sudo apt install wget gpg
+sudo apt install mc
+sudo apt install flameshot
+sudo apt install exa
+sudo apt install zsh
+sudo apt install git-all
+sudo apt install snapd
+sudo apt install vim
 
 ##Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -129,6 +130,9 @@ sudo snap install remmina
 
 # Terminator
 sudo apt install terminator
+
+# Postman
+sudo snap install postman
 
 # Pipewire - para compartilhamento de tela no meet
 sudo apt install pipewire -y

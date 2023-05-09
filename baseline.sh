@@ -135,6 +135,9 @@ sudo apt install terminator
 # Postman
 sudo snap install postman
 
+# Notion
+sudo snap install notion-snap-reborn
+
 # Pipewire - para compartilhamento de tela no meet
 sudo apt install pipewire -y
 systemctl --user start pipewire wireplumber

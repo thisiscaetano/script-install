@@ -110,6 +110,8 @@ plugins=(git
 alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ll="ls -lha"
+alias k="kubectl"
+alias kx="kubectx"
 
 ## TERRAFORM
 alias tf="terraform"
@@ -124,3 +126,12 @@ alias kpfargos="kubectl port-forward svc/argocd-server 8080:80 -n argocd"
 alias kpfargo="kubectl port-forward svc/argocd-server 8080:80 -n argo-cd"
 
 alias argoc4="argocd login 127.0.0.1:8080"
+
+## IAP
+alias teletrabalho="gcloud compute start-iap-tunnel gcvmwjmptt002 3389 --project=br-host-teletrabalho --zone=us-east1-b --local-host-port=127.0.0.1:3389"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/paulocaetano/google-cloud-sdk/path.zsh.inc' ]; then . '/home/paulocaetano/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/paulocaetano/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/paulocaetano/google-cloud-sdk/completion.zsh.inc'; fi

@@ -23,6 +23,8 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$USER/.profile ## ajuste $USER
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+sudo apt-get install build-essential
+brew install gcc
 
 ##Brew formulas
 brew install fzf
@@ -80,24 +82,6 @@ wine --version
 #Download the following dependencies:
 sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
-#Download Docker’s official GPG key to verify the integrity of packages
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
-
-#Add the Docker repository to your system repository
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian bookworm stable"
-
-#Update the apt repository:
-sudo apt-get update
-
-#Install Docker Engine and containerd:
-sudo apt-get install docker-ce docker-ce-cli containerd.io
-
-#Check the status by typing:
-systemctl status docker
-docker -v
-
-sudo groupadd docker
-newgrp docker
 
 cd ~/Downloads/
 wget -O https://www.playonlinux.com/script_files/PlayOnLinux/4.3.4/PlayOnLinux_4.3.4.deb
@@ -147,3 +131,22 @@ curl -fsSL https://downloads.k8slens.dev/keys/gpg | gpg --dearmor | sudo tee /us
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/lens-archive-keyring.gpg] https://downloads.k8slens.dev/apt/debian stable main" | sudo tee /etc/apt/sources.list.d/lens.list > /dev/null
 sudo apt update
 sudo apt install lens
+
+#Download Docker’s official GPG key to verify the integrity of packages
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+
+#Add the Docker repository to your system repository
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian bookworm stable"
+
+#Update the apt repository:
+sudo apt-get update
+
+#Install Docker Engine and containerd:
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+#Check the status by typing:
+systemctl status docker
+docker -v
+
+sudo groupadd docker
+newgrp docker

@@ -13,6 +13,7 @@ sudo apt install zplug
 sudo apt install git-all
 sudo apt install snapd
 sudo apt install vim
+sudo apt install htop
 
 ##Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

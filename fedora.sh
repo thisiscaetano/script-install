@@ -1,4 +1,3 @@
-
 ##Base Files
 sudo dnf update
 sudo dnf install neofetch

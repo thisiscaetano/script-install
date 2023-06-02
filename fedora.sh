@@ -9,6 +9,7 @@ sudo dnf install flameshot
 sudo dnf install exa
 sudo dnf install zsh
 sudo dnf install zplug
+sudo dnf install zinit
 sudo dnf install git-all
 sudo dnf install snapd
 sudo dnf install vim

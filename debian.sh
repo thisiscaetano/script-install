@@ -11,7 +11,7 @@ sudo apt install exa
 sudo apt install zsh
 sudo apt install zplug
 sudo apt install git-all
-sudo apt install snapd
+# sudo apt install snapd
 sudo apt install vim
 sudo apt install htop
 
@@ -84,9 +84,9 @@ wine --version
 sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
 
-cd ~/Downloads/
-wget -O https://www.playonlinux.com/script_files/PlayOnLinux/4.3.4/PlayOnLinux_4.3.4.deb
-sudo apt install ./PlayOnLinux_4.3.4.deb
+# cd ~/Downloads/
+# wget -O https://www.playonlinux.com/script_files/PlayOnLinux/4.3.4/PlayOnLinux_4.3.4.deb
+# sudo apt install ./PlayOnLinux_4.3.4.deb
 
 # Minikube
 sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
@@ -97,36 +97,36 @@ newgrp libvirt-qemu
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
-#Brave
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo apt update
-sudo apt install brave-browser
+# #Brave
+# sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+# echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+# sudo apt update
+# sudo apt install brave-browser
 
 # Spotify
 curl -sS https://download.spotify.com/debian/pubkey_7A3A762FAFD4A51F.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client -y
 
-# Authy
-sudo snap install authy
+# # Authy
+# sudo snap install authy
 
-# Remmina
-sudo snap install remmina
+# # Remmina
+# sudo snap install remmina
 
-# Terminator
-sudo apt install terminator
+# # Terminator
+# sudo apt install terminator
 
-# Postman
-sudo snap install postman
+# # Postman
+# sudo snap install postman
 
-# Notion
-sudo snap install notion-snap-reborn
+# # Notion
+# sudo snap install notion-snap-reborn
 
 # Pipewire - para compartilhamento de tela no meet
 sudo apt install pipewire -y
 systemctl --user start pipewire wireplumber
-
+ 
 # Lens
 curl -fsSL https://downloads.k8slens.dev/keys/gpg | gpg --dearmor | sudo tee /usr/share/keyrings/lens-archive-keyring.gpg > /dev/null
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/lens-archive-keyring.gpg] https://downloads.k8slens.dev/apt/debian stable main" | sudo tee /etc/apt/sources.list.d/lens.list > /dev/null

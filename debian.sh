@@ -1,20 +1,22 @@
 
 ##Base Files
 sudo apt update
-sudo apt install neofetch
-sudo apt install curl
-sudo apt-get install build-essential
-sudo apt install wget gpg
-sudo apt install mc
-sudo apt install flameshot
-sudo apt install exa
-sudo apt install zsh
-sudo apt install zplug
-sudo apt install git-all
+sudo apt upgrade -y
+sudo apt install -y neofetch
+sudo apt install -y curl
+sudo apt-get install -y build-essential
+sudo apt install -y wget gpg
+sudo apt install -y mc
+sudo apt install -y flameshot
+sudo apt install -y exa
+sudo apt install -y zsh
+sudo apt install -y zplug
+sudo apt install -y git-all
 # sudo apt install snapd
-sudo apt install vim
-sudo apt install htop
-
+sudo apt install -y vim
+sudo apt install -y htop
+sudo apt install -y solaar
+sudo apt install tmux
 ##Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb

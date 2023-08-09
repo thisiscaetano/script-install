@@ -137,10 +137,12 @@ alias argoc4="argocd login 127.0.0.1:8080"
 ## IAP
 alias teletrabalho="gcloud compute start-iap-tunnel gcvmwjmptt002 3389 --project=br-host-teletrabalho --zone=us-east1-b --local-host-port=127.0.0.1:3389"
 
+## GCLOUD
+alias gcp="gcloud config set project"
 ## TMUX
-#alias tksa="tmux kill-session -a"
+alias tksa="tmux kill-session -a"
 
-#if [ "$TMUX" = "" ]; then tmux; fi
+if [ "$TMUX" = "" ]; then tmux; fi
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/paulo/google-cloud-sdk/path.zsh.inc' ]; then . '/home/paulo/google-cloud-sdk/path.zsh.inc'; fi
@@ -167,3 +169,4 @@ zinit light zsh-users/zsh-completions
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+

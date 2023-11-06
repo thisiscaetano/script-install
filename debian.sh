@@ -68,8 +68,6 @@ wget https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-Deb
 sudo apt install ./veracrypt-1.25.9-Debian-11-amd64.deb 
 
 
-
-
 ##Wine
 sudo dpkg --add-architecture i386 
 sudo mkdir -pm755 /etc/apt/keyrings

@@ -142,6 +142,12 @@ alias gcp="gcloud config set project"
 ## TMUX
 alias tksa="tmux kill-session -a"
 
+# history control
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+#shopt -s histappend                      # append to history, don't overwrite it
+
 if [ "$TMUX" = "" ]; then tmux; fi
 
 # The next line updates PATH for the Google Cloud SDK.

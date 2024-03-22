@@ -106,7 +106,6 @@ source $ZSH/oh-my-zsh.sh
 plugins=(git
         terraform
         gcloud
-        kubectl
         cp
         zsh-autosuggestions
         zsh-z
@@ -119,6 +118,8 @@ alias zshconfig="vim ~/.zshrc"
 alias ll="ls -lha"
 alias k="kubectl"
 alias kx="kubectx"
+alias kgns="kubectl get namespace"
+alias kgp="kubectl get pods"
 
 ## TERRAFORM
 alias tf="terraform"
@@ -142,19 +143,25 @@ alias gcp="gcloud config set project"
 ## TMUX
 alias tksa="tmux kill-session -a"
 
+## CUSTOM
+alias init="dbus-run-session startplasma-wayland"
+
+## CARREFOUR
+alias fqdn="/home/paulo/carrefour/csr-multicloud-automations/carrefour.com/Scripts/fqdn2ip_gpt.sh"
+alias ipam="/home/paulo/carrefour/csr-multicloud-automations/carrefour.com/Scripts/ipam-local.sh"
+alias kxgcp="/home/paulo/carrefour/csr-multicloud-automations/carrefour.com/Scripts/cluster_attach.sh"
+
 # history control
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
 #shopt -s histappend                      # append to history, don't overwrite it
 
-if [ "$TMUX" = "" ]; then tmux; fi
+httpcat() {
+  curl -s "https://http.cat/$1.jpg" | kitty icat
+}
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/paulo/google-cloud-sdk/path.zsh.inc' ]; then . '/home/paulo/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/paulo/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/paulo/google-cloud-sdk/completion.zsh.inc'; fi
+#if [ "$TMUX" = "" ]; then tmux; fi
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -176,3 +183,11 @@ zinit light zsh-users/zsh-completions
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/paulo/gcp-sdk/google-cloud-sdk/path.zsh.inc' ]; then . '/home/paulo/gcp-sdk/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/paulo/gcp-sdk/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/paulo/gcp-sdk/google-cloud-sdk/completion.zsh.inc'; fi

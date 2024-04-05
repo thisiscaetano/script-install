@@ -5,7 +5,6 @@ sudo systemctl restart bluetooth
 #[Policy]
 #AutoEnable=true
 
-
 ## YAY INSTALL
 sudo pacman -S git go
 git clone https://aur.archlinux.org/yay.git
@@ -41,12 +40,7 @@ brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 
 ## GOOGLE SDK
-cd ~
-mkdir gcp-sdk && cd gcp-sdk
-curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-425.0.0-linux-x86_64.tar.gz
-tar -xf google-cloud-cli-425.0.0-linux-x86_64.tar.gz
-./google-cloud-sdk/install.sh
-gcloud components install cloud_sql_proxy docker-credential-gcr kustomize beta kubectl
+yay -S google-cloud-cli
 
 ## DOCKER INSTALL
 
@@ -66,10 +60,11 @@ yay -S openlens-bin
 ## POSTMAN INSTALL
 yay -S postman-bin
 
-## AUTH INSTALL
-yay -S authy
+## FLATPAK INSTALL
+yay -S flatpak
 
 ## OBSIDIAN INSTALL
 flatpak install flathub md.obsidian.Obsidian
 
-
+## NC INSTALL
+yay -S gnu-netcat

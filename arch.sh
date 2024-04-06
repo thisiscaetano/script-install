@@ -68,3 +68,9 @@ flatpak install flathub md.obsidian.Obsidian
 
 ## NC INSTALL
 yay -S gnu-netcat
+
+## NEOFETCH INSTALL
+yay -S neofetch
+
+## MINIKUBE INSTALL
+yay -S minikube

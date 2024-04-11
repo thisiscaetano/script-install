@@ -14,7 +14,6 @@ sudo apt install -y zplug
 sudo apt install -y git-all
 sudo apt install -y vim
 sudo apt install -y htop
-sudo apt install tmux
 
 ##Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -60,22 +59,6 @@ rm -f packages.microsoft.gpg
 sudo apt install apt-transport-https
 sudo apt update
 sudo apt install code
-
-
-##VeraCrypt
-cd ~/Downloads/
-wget https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-Debian-11-amd64.deb
-sudo apt install ./veracrypt-1.25.9-Debian-11-amd64.deb 
-
-
-##Wine
-sudo dpkg --add-architecture i386 
-sudo mkdir -pm755 /etc/apt/keyrings
-sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
-sudo apt update
-sudo apt install --install-recommends winehq-stable
-wine --version
 
 
 ##Docker

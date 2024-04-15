@@ -148,9 +148,9 @@ alias gcp="gcloud config set project"
 alias init="dbus-run-session startplasma-wayland"
 
 ## CARREFOUR
-alias fqdn="/home/paulo/carrefour/csr-multicloud-automations/carrefour.com/Scripts/fqdn2ip_gpt.sh"
-alias ipam="/home/paulo/carrefour/csr-multicloud-automations/carrefour.com/Scripts/ipam-local.sh"
-alias kxgcp="/home/paulo/carrefour/csr-multicloud-automations/carrefour.com/Scripts/cluster_attach.sh"
+alias fqdn="/home/$USERNAME/carrefour/csr-multicloud-automations/carrefour.com/Scripts/fqdn2ip_gpt.sh"
+alias ipam="/home/$USERNAME/carrefour/csr-multicloud-automations/carrefour.com/Scripts/ipam-local.sh"
+alias kxgcp="/home/$USERNAME/carrefour/csr-multicloud-automations/carrefour.com/Scripts/cluster_attach.sh"
 
 # history control
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries

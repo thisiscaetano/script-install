@@ -35,6 +35,7 @@ brew install fzf
 brew install k9s
 brew install kubectx
 brew install argocd
+brew install mnikube
 
 ##terraform
 brew tap hashicorp/tap
@@ -66,14 +67,11 @@ curl -fsSL https://get.docker.com | bash
 #Download the following dependencies:
 sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
-# Minikube
-sudo apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
-sudo adduser -a $USER libvirt
-sudo adduser -a $USER libvirt-qemu
-newgrp libvirt
-newgrp libvirt-qemu
-curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-sudo install minikube-linux-amd64 /usr/local/bin/minikube
+# Remmina
+flatpak install flathub org.remmina.Remmina
+
+# Obsidian
+flatpak install flathub md.obsidian.Obsidian
 
 # Spotify
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -88,6 +86,3 @@ curl -fsSL https://downloads.k8slens.dev/keys/gpg | gpg --dearmor | sudo tee /us
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/lens-archive-keyring.gpg] https://downloads.k8slens.dev/apt/debian stable main" | sudo tee /etc/apt/sources.list.d/lens.list > /dev/null
 sudo apt update
 sudo apt install lens
-
-# Obsidian
-flatpak install flathub md.obsidian.Obsidian

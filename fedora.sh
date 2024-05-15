@@ -42,8 +42,9 @@ brew install kubectx
 brew install argocd
 
 ##terraform
-brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
+sudo dnf install -y dnf-plugins-core
+sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/fedora/hashicorp.repo
+sudo dnf -y install terraform
 
 ##gcloud install
 sudo tee -a /etc/yum.repos.d/google-cloud-sdk.repo << EOM

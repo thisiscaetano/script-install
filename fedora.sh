@@ -1,9 +1,9 @@
 ##Base Files
 sudo dnf update
-sudo dnf tilix
+sudo dnf terminator
 sudo dnf install neofetch
 sudo dnf install curl
-sudo dnf-get install build-essential
+sudo dnf install build-essential
 sudo dnf install wget gpg
 sudo dnf install mc
 sudo dnf install flameshot
@@ -14,6 +14,7 @@ sudo dnf install zinit
 sudo dnf install git-all
 sudo dnf install vim
 sudo dnf install htop
+suod yum install helm
 
 ##Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -33,7 +34,6 @@ brew install gcc
 ##Docker
 curl -fsSL https://get.docker.com | bash
 #Download the following dependencies:
-sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
 ##Brew formulas
 brew install fzf
@@ -69,15 +69,6 @@ cd ~/Downloads/
 wget https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-Debian-11-amd64.deb
 sudo dnf install ./veracrypt-1.25.9-Debian-11-amd64.deb 
 
-##Wine
-sudo dpkg --add-architecture i386 
-sudo mkdir -pm755 /etc/dnf/keyrings
-sudo wget -O /etc/dnf/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
-sudo wget -NP /etc/dnf/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
-sudo dnf update
-sudo dnf install --install-recommends winehq-stable
-wine --version
-
 ##Minikube
 sudo dnf install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
 sudo adduser -a $USER libvirt
@@ -87,11 +78,18 @@ newgrp libvirt-qemu
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 sudo install minikube-linux-amd64 /usr/local/bin/minikube
 
-##spotify
-sudo dnf install -y flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-sudo flatpak install flathub com.spotify.Client
+##flathub
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-##lens
-sudo ln -s /var/lib/snapd/snap /snap
-sudo snap install kontena-lens --classic
+##Obsidian
+flatpak install flathub md.obsidian.Obsidian
+
+##Lens
+flatpak install flathub dev.k8slens.OpenLens
+
+##Spotify
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.spotify.Client
+
+##Remmina
+flatpak install flathub org.remmina.Remmina

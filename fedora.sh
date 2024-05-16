@@ -24,16 +24,15 @@ sudo dnf install fedora-workstation-repositories
 sudo dnf config-manager --set-enabled google-chrome
 sudo dnf install google-chrome-stable -y
 
+##Docker
+curl -fsSL https://get.docker.com | bash
+
 ##HomeBrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 (echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/$USER/.profile ## ajuste $USER
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-sudo dnf-get install build-essential
+sudo yum install build-essential
 brew install gcc
-
-##Docker
-curl -fsSL https://get.docker.com | bash
-#Download the following dependencies:
 
 ##Brew formulas
 brew install fzf

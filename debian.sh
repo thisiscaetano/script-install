@@ -37,6 +37,7 @@ brew install k9s
 brew install kubectx
 brew install argocd
 brew install mnikube
+brew install helm
 
 ##terraform
 brew tap hashicorp/tap

@@ -2,6 +2,7 @@
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y terminator
+sudo apt install -y konsole
 sudo apt install -y neofetch
 sudo apt install -y curl
 sudo apt-get install -y build-essential

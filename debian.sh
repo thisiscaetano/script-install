@@ -15,6 +15,8 @@ sudo apt install -y zplug
 sudo apt install -y git-all
 sudo apt install -y vim
 sudo apt install -y htop
+sudp apt install  -y dnsutils
+sudp apt install  -y whois
 
 ##Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -38,6 +40,7 @@ brew install kubectx
 brew install argocd
 brew install mnikube
 brew install helm
+brew install trivy
 
 ##terraform
 brew tap hashicorp/tap
@@ -78,6 +81,9 @@ flatpak install flathub md.obsidian.Obsidian
 # Spotify
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub com.spotify.Client
+
+# Discord
+flatpak install flathub com.discordapp.Discord
 
 # PIPEWIRE
 sudo apt install pipewire -y

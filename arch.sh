@@ -1,3 +1,13 @@
+## ESSENTIALS
+sudo pacman -Sy neofetch
+sudo pacman -Sy curl
+sudo pacman -Sy mc
+sudo pacman -Sy flameshot
+sudo pacman -Sy zplug
+sudo pacman -Sy zinit
+sudo pacman -Sy git
+sudo pacman -Sy vim
+
 ## BLUETOOTH DRIVER INSTALL
 sudo pacman -S bluez bluez-utils
 sudo systemctl restart bluetooth
@@ -11,6 +21,9 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 yay -Syu
+
+## Flatpak Install
+sudo pacman -Sy flatpak
 
 ## ZSH INSTALL
 sudo pacman -S zsh
@@ -38,6 +51,7 @@ brew install kubectx
 brew install argocd
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
+brew install helm
 
 ## GOOGLE SDK
 yay -S google-cloud-cli
@@ -74,3 +88,9 @@ yay -S neofetch
 
 ## MINIKUBE INSTALL
 yay -S minikube
+
+## Discord
+flatpak install flathub com.discordapp.Discord
+
+## Remmina
+flatpak install flathub org.remmina.Remmina

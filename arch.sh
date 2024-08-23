@@ -1,12 +1,12 @@
 ## ESSENTIALS
-sudo pacman -Sy neofetch
-sudo pacman -Sy curl
-sudo pacman -Sy mc
-sudo pacman -Sy flameshot
-sudo pacman -Sy zplug
-sudo pacman -Sy zinit
-sudo pacman -Sy git
-sudo pacman -Sy vim
+sudo pacman -S neofetch
+sudo pacman -S curl
+sudo pacman -S mc
+sudo pacman -S flameshot
+sudo pacman -S zplug
+sudo pacman -S zinit
+sudo pacman -S git
+sudo pacman -S vim
 
 ## BLUETOOTH DRIVER INSTALL
 sudo pacman -S bluez bluez-utils
@@ -25,36 +25,11 @@ yay -Syu
 ## Flatpak Install
 sudo pacman -Sy flatpak
 
-## ZSH INSTALL
-sudo pacman -S zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 ## FLAMESHOT INSTALL
 yay -S flameshot
 
 ## CHROME INSTALL
 yay -S google-chrome
-
-##HomeBrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/paulo/.zshrc
-    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
-sudo pacman -S base-devel
-brew install gcc
-
-##Brew formulas
-brew install fzf
-brew install k9s
-brew install kubectx
-brew install argocd
-brew tap hashicorp/tap
-brew install hashicorp/tap/terraform
-brew install helm
-
-## GOOGLE SDK
-yay -S google-cloud-cli
 
 ## DOCKER INSTALL
 
@@ -94,3 +69,25 @@ flatpak install flathub com.discordapp.Discord
 
 ## Remmina
 flatpak install flathub org.remmina.Remmina
+
+## ZSH INSTALL
+sudo pacman -S zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+##HomeBrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/paulo/.zshrc
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+sudo pacman -S base-devel
+brew install gcc
+
+##Brew formulas
+brew install fzf
+brew install k9s
+brew install kubectx
+brew install argocd
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+brew install helm

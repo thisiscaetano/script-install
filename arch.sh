@@ -22,6 +22,9 @@ cd yay
 makepkg -si
 yay -Syu
 
+## JQ
+yay -S jq
+
 ## Flatpak Install
 sudo pacman -Sy flatpak
 
@@ -73,6 +76,12 @@ flatpak install flathub org.remmina.Remmina
 ## ZSH INSTALL
 sudo pacman -S zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+## GOOGLE SDK
+curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
+tar -xf google-cloud-cli-linux-x86_64.tar.gz
+./google-cloud-sdk/install.sh
+./google-cloud-sdk/bin/gcloud init
 
 ##HomeBrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

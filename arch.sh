@@ -24,6 +24,8 @@ yay -Syu
 
 ## JQ
 yay -S jq
+## VI
+yay -S vi
 
 ## Flatpak Install
 sudo pacman -Sy flatpak

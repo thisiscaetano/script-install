@@ -48,9 +48,6 @@ sudo pacman -Syu spotify-launcher
 ## VSCODE INSTALL
 yay -S visual-studio-code-bin
 
-## LENS INSTALL
-yay -S openlens-bin
-
 ## POSTMAN INSTALL
 yay -S postman-bin
 

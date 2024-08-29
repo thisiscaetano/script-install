@@ -7,6 +7,7 @@ sudo pacman -S zplug
 sudo pacman -S zinit
 sudo pacman -S git
 sudo pacman -S vim
+sudo pacman -S calc
 
 ## BLUETOOTH DRIVER INSTALL
 sudo pacman -S bluez bluez-utils

@@ -101,3 +101,5 @@ brew install argocd
 brew tap hashicorp/tap
 brew install hashicorp/tap/terraform
 brew install helm
+brew tap hcavarsan/kftray
+brew install kftray-linux

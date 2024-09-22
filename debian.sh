@@ -2,7 +2,6 @@
 sudo apt update
 sudo apt upgrade -y
 sudo apt install -y terminator
-sudo apt install -y konsole
 sudo apt install -y neofetch
 sudo apt install -y curl
 sudo apt-get install -y build-essential
@@ -17,6 +16,10 @@ sudo apt install -y vim
 sudo apt install -y htop
 sudp apt install  -y dnsutils
 sudp apt install  -y whois
+sudo apt install flatpak -y
+
+#add repository flathub
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 ##Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

@@ -76,17 +76,17 @@ curl -fsSL https://get.docker.com | bash
 sudo apt-get install apt-transport-https ca-certificates curl gnupg2 software-properties-common
 
 # Remmina
-flatpak install flathub org.remmina.Remmina
-
-# Obsidian
-flatpak install flathub md.obsidian.Obsidian
+flatpak install flathub org.remmina.Remmina -y
 
 # Spotify
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub com.spotify.Client
+flatpak install flathub com.spotify.Client -y
 
 # Discord
-flatpak install flathub com.discordapp.Discord
+flatpak install flathub com.discordapp.Discord -y
+
+# DBeaver
+flatpak install flathub io.dbeaver.DBeaverCommunity -y
 
 # PIPEWIRE
 sudo apt install pipewire -y

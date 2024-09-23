@@ -17,6 +17,7 @@ sudo apt install -y htop
 sudp apt install  -y dnsutils
 sudp apt install  -y whois
 sudo apt install flatpak -y
+sudo apt install calc -y
 
 #add repository flathub
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

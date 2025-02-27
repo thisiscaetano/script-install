@@ -1,6 +1,5 @@
 ##Base Files
 sudo dnf update
-sudo dnf terminator
 sudo dnf install neofetch
 sudo dnf install curl
 sudo dnf install build-essential
@@ -63,12 +62,6 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 sudo dnf check-update
 sudo dnf install code
 
-
-##VeraCrypt
-cd ~/Downloads/
-wget https://launchpad.net/veracrypt/trunk/1.25.9/+download/veracrypt-1.25.9-Debian-11-amd64.deb
-sudo dnf install ./veracrypt-1.25.9-Debian-11-amd64.deb 
-
 ##Minikube
 sudo dnf install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
 sudo adduser -a $USER libvirt
@@ -93,3 +86,12 @@ flatpak install flathub com.spotify.Client
 
 ##Remmina
 flatpak install flathub org.remmina.Remmina
+
+##Brave
+flatpak install flathub com.brave.Browser
+
+##Discord
+flatpak install flathub com.discordapp.Discord
+
+##Dbeaver
+flatpak install flathub io.dbeaver.DBeaverCommunity
